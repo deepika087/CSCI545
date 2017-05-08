@@ -1,0 +1,46 @@
+
+
+
+syms c0 c1 c2 c3 c4 c5 t start_x start_xd start_xdd tf tf_d tf_dd
+c0=start_x
+c1=start_xd
+c2=start_xdd/2
+
+f(t) = c0 + c1 * t + c2 * t^2 + c3 * t^3 + c4 * t^4 + c5 * t^5;
+df = diff(f, t);
+dff = diff (df, t);
+
+eqn1 = f(t) == tf;
+eqn2 = df == tf_d;
+eqn3 = dff == tf_dd;
+
+disp(eqn1)
+disp(eqn2)
+disp(eqn3)
+
+sol = solve([eqn1, eqn2, eqn3], [ c3, c4, c5]);
+sol.c3
+sol.c4
+sol.c5
+
+c3 = -(20*start_x - 20*tf + 12*t*start_xd + 8*t*tf_d + 3*start_xdd*t^2 - tf_dd*t^2)/(2*t^3)
+ 
+ 
+c4 = (30*start_x - 30*tf + 16*t*start_xd + 14*t*tf_d + 3*start_xdd*t^2 - 2*tf_dd*t^2)/(2*t^4)
+ 
+ 
+c5 = -(12*start_x - 12*tf + 6*t*start_xd + 6*t*tf_d + start_xdd*t^2 - tf_dd*t^2)/(2*t^5)
+
+ans =
+ 
+-(20*x0 - 20*xf + 12*t*v0 + 8*t*vf + 3*a0*t^2 - af*t^2)/(2*t^3)
+ 
+ 
+ans =
+ 
+(30*x0 - 30*xf + 16*t*v0 + 14*t*vf + 3*a0*t^2 - 2*af*t^2)/(2*t^4)
+ 
+ 
+ans =
+ 
+-(12*x0 - 12*xf + 6*t*v0 + 6*t*vf + a0*t^2 - af*t^2)/(2*t^5)	

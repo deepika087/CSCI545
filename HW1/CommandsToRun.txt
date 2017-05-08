@@ -1,0 +1,35 @@
+euler(@funct, 0, 0.001, 0, 10)
+PartE(@PartE_funct, 0, 0.001, 0, 0, 1
+
+vpa(subs(solx, params, 2))
+
+syms c0 c1 c2 c3 c4 c5 t x0 v0 a0 xf vf af
+f(t) = c0 + c1 * t + c2 * t^2 + c3 * t^3 + c4 * t^4 + c5 * t^5;
+df = diff(f, t);
+dff = diff (df, t);
+
+eqn1 = f(t) == x0;
+eqn2 = df == 0;
+eqn3 = vpa(subs(dff, t, 0)) == 0;
+eqn4 = vpa(subs(f(t), t, 1)) == 1;
+eqn5 = vpa(subs(df, t, 1)) == 0;
+eqn6 = vpa(subs(dff, t, 1)) == 0;
+
+disp(eqn1)
+disp(eqn2)
+disp(eqn3)
+disp(eqn4)
+disp(eqn5)
+disp(eqn6)
+
+sol = solve([eqn1, eqn2, eqn3, eqn4, eqn5, eqn6], [c0, c1, c2, c3, c4, c5]);
+
+
+
+
+
+subs(f, {c0, c1, c2, c3, c4, c5, x}, {1, 2, 3, 4, 5, 6, 1})
+
+
+fprintf('Reached here %d %d %d %d %d %d', o_c0, o_c1, o_c2, o_c3, o_c4, o_c5);
+   fprintf('Starting computation');

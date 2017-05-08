@@ -1,0 +1,133 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{upgreek}
+\usepackage{graphicx}
+\graphicspath{ {images/Robotics_Assign4/} }
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+ 
+\begin{document}
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in 
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+ 
+\title{CSCI 545: Homework 4}%replace X with the appropriate number
+\author{Deepika Anand} %replace with your name
+\maketitle
+ 
+\begin{problem} 1 (a)
+\end{problem}
+\begin{Answer}
+Equilibrium point.
+\end{Answer}
+
+\begin{problem} 1 (b)
+\end{problem}
+\begin{Answer}
+Derivation for stability analysis
+
+\end{Answer}
+
+\begin{problem} 1 (c)
+\end{problem}
+\begin{Answer}
+w = [0 0 0 0 0 0 0 0 0 0]
+Position, Velocity, Acceleration and x graph\\
+\includegraphics[width=18cm, height=15cm]{c_1}\\
+\textbf{$\psi$ Graph}\\
+\includegraphics[width=18cm, height=15cm]{c_2}\\
+\textbf{Code}
+\includegraphics[width=18cm, height=15cm]{c_code}\\
+\end{Answer}
+
+\begin{problem} 1 (d)
+\end{problem}
+\begin{Answer}
+\begin{itemize}
+    \item When w = [10 10 10 10 10 10 10 10 10 10 10]
+    Position, Velocity, Acceleration and x graph\\
+    \includegraphics[width=18cm, height=15cm]{D1_1}\\
+    \textbf{$\psi$ Graph}\\
+    \includegraphics[width=18cm, height=15cm]{D1_2}\\
+    \item When w = [-10 -10 -10 -10 -10 -10 -10 -10 -10 -10 -10]
+        Position, Velocity, Acceleration and x graph\\
+        \includegraphics[width=18cm, height=15cm]{D2_1}\\
+        \textbf{$\psi$ Graph}\\
+    \includegraphics[width=18cm, height=15cm]{D2_2}\\
+    \item When w = [-10 -10 -10 -10 -10 1 1 1 1 1]
+        Position, Velocity, Acceleration and x graph\\
+        \includegraphics[width=18cm, height=15cm]{D3_1}\\
+        \textbf{$\psi$ Graph}\\
+    \includegraphics[width=18cm, height=15cm]{D3_2}\\ 
+    \item When w = [ 1 1 1 100 1000 100 1 1 1 1]
+        Position, Velocity, Acceleration and x graph\\
+        \includegraphics[width=18cm, height=15cm]{D4_1}\\
+        \textbf{$\psi$ Graph}\\
+    \includegraphics[width=18cm, height=15cm]{D3_2}\\
+    \item When w =  [ -100 -100 -100 1000 100000 1000 1 1 1 1]
+        Position, Velocity, Acceleration and x graph\\
+        \includegraphics[width=18cm, height=15cm]{D5_1}\\
+        \textbf{$\psi$ Graph}\\
+    \includegraphics[width=18cm, height=15cm]{D3_2}\\
+\end{itemize}
+\end{Answer}
+
+\begin{problem} 1 (e)
+\end{problem}
+\begin{Answer}
+For imitation learning.w is given as \\
+\includegraphics[width=18cm, height=5cm]{E1}\\
+\includegraphics[width=18cm, height=5cm]{E2}\\
+Derivation taken by paper written by the professor.\\
+\textbf{Code}\\
+\includegraphics[width=18cm, height=10cm]{E3}\\
+\textbf{Output w}\\
+\begin{verbatim}
+    w =
+
+ -414.4691 -414.6940 -414.8347 -414.7682 -414.6814 -414.6419 -414.6414 -414.6518 -414.6579 -414.6590
+\end{verbatim}
+ Position, Velocity, Acceleration and x graph\\
+\includegraphics[width=18cm, height=10cm]{E5}\\
+\textbf{$\psi$ Graph}\\
+\includegraphics[width=18cm, height=15cm]{D3_2}\\
+\end{Answer}
+
+
+\end{document}
+

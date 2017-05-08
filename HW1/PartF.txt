@@ -1,0 +1,11 @@
+syms c3 c4 c5 x01 x02 x0 xf xf1 xf2 t
+
+eqn1 = x01 + x02 * t + 3 * c3 * t^2 + 4 * c4 * t^3 + 5 * c5 * t^4 == xf1
+eqn2 = x02 + 6 * c3 * t + 12 * c4 * t^2 + 120 * c5 * t^3 == xf2
+eqn3 = x0 + x01*t + (x02/2) * t^2 + c3 * t^3 + c4 * t^4 == xf
+
+sol = solve([eqn1, eqn2, eqn3], [c3, c4, c5]);
+xSol = sol.c3
+ySol = sol.c4
+zSol = sol.c5
+
